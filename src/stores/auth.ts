@@ -14,13 +14,15 @@ export const useAuthStore = defineStore(
     })
     function getAsyncRouer(name: string) {
       console.log(123, name)
-      // 真实逻辑为通过接口获取当前用户的router配置,name这个参数也是不需要的
+      // 以下为测试逻辑, 真实逻辑为通过接口获取当前用户的router配置,name这个参数也是不需要的
+      userInfo.value.name = name
       let asyncRouters: string[] = []
       if (name == 'admin') {
         asyncRouters = ['goods', 'goodsAdd']
       } else if (name == 'user') {
         asyncRouters = ['user', 'userList']
       }
+      // ------
       asyncRouter.value.push(...baseRouterName, ...asyncRouters)
       console.log(asyncRouter.value)
     }
