@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>cg_up_icon</title>
+    <g id="权限备份" stroke="none" stroke-width="1">
+        <g id="系统权限/权限管理" transform="translate(-429.000000, -243.000000)">
+            <g id="cg_up_icon" transform="translate(437.000000, 251.000000) scale(1, -1) translate(-437.000000, -251.000000) translate(429.000000, 243.000000)">
+                <rect id="矩形" opacity="0" x="0" y="0" width="16" height="16"></rect>
+                <polygon id="路径" points="7.5 14 7.5 3.9125 3.7125 7.7125 3 7 7.2875 2.7125 8 2 8.7125 2.7125 13 7 12.2875 7.7125 8.5 3.9125 8.5 14"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

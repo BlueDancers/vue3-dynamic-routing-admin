@@ -1,0 +1,41 @@
+@import '../../node_modules/ant-design-vue/es/style/themes/default.less';
+
+.base_card {
+  margin: 16px 0;
+  padding: 16px;
+  background: #fff;
+  border-radius: @border-radius-base;
+}
+
+.base_form {
+  margin: 16px 0;
+  padding: 16px;
+  padding-bottom: 0px;
+  background: #fff;
+  border-radius: @border-radius-base;
+  .ant-form {
+    display: flex;
+    flex-flow: wrap;
+  }
+  .ant-form-item {
+    margin-bottom: 16px;
+    margin-right: 16px;
+  }
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  --primary-color: @primary-color;
+  --danger-color: #ff4d4f;
+}
+
+// @media (prefers-color-scheme: dark) {
+//   html,
+//   img {
+//     filter: invert(1) hue-rotate(180deg);
+//   }
+//   .some-ele {
+//     box-shadow: none;
+//   }
+// }
