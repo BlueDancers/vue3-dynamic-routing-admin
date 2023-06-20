@@ -1,0 +1,1 @@
+import{_ as s,c,o as t,a as e}from"./index-365f2728.js";const o={},a={class:"w-[100%]"},_=e("div",{class:"base_card"},[e("div",{class:"text-[18px]"},"我是公共页面,任何用户都有我")],-1),n=[_];function r(d,i){return t(),c("div",a,n)}const f=s(o,[["render",r]]);export{f as default};
