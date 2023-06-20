@@ -106,35 +106,30 @@ const router = createRouter({
   ],
 })
 
+let whiteList = ['login']
+
 router.beforeEach((to, from, next) => {
   const auth = useAuthStore()
-
   NProgress.start()
+  document.title = String(to.meta.title)
+  if (to.name == '404') {
+    next()
+    return
+  }
   // 登录后逻辑
   if (auth.isLogin) {
-    if (to.name == '404') {
+    // 判断权限是否通过
+    if (auth.asyncRouter.includes(String(to.name))) {
       next()
-      return
-    }
-
-    if (to.name == 'login') {
-      next({ name: 'dashboard' })
     } else {
-      console.log(auth.asyncRouter)
-      console.log(to)
-      // 判断权限是否通过
-      if (auth.asyncRouter.includes(String(to.name))) {
-        document.title = String(to.meta.title)
-        next()
-      } else {
-        next({ name: '404' })
-      }
+      next({ name: '404' })
     }
     return
-  } else {
+  }
+
+  if (!auth.isLogin) {
     // 未登录逻辑
-    if (to.name == 'login') {
-      document.title = String(to.meta.title)
+    if (whiteList.includes(String(to.name))) {
       next()
     } else {
       next({ name: 'login' })
